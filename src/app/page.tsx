@@ -1,6 +1,11 @@
+import { CardBody, CardContainer } from "@/components/global/3d-card";
+import { HeroParallax } from "@/components/global/connect-parallax";
 import { ContainerScroll } from "@/components/global/container-scoll-animation";
+import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
+import { LampComponent } from "@/components/global/lamp";
 import Navbar from "@/components/global/navbar";
 import { Button } from "@/components/ui/button";
+import { clients, products } from "@/lib/constant";
 import Image from "next/image";
 
 export default function Home() {
@@ -36,6 +41,32 @@ export default function Home() {
           />
         </div>
       </section>
+      <div className="flex items-center justify-center">
+        <InfiniteMovingCards
+          className="md:mt-[18rem] xl:mt-[30rem] mt-[-100px]"
+          items={clients}
+          direction="right"
+          speed="slow"
+        />
+      </div>
+      <section>
+        <HeroParallax products={products}></HeroParallax>
+      </section>
+      <section className="mt-[-500px]">
+        <LampComponent />
+        <div
+          className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
+          <CardContainer className="inter-var">
+            <CardBody className="bg-gray-50 dark:bg-black relative 
+            group/card dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] 
+             dark:border-white/[0.2] border-black/[0.1] 
+            w-full md:!w-[350px] h-auto rounded-xl p-6 border">
+              <></>
+            </CardBody>
+          </CardContainer>
+        </div>
+      </section>
+
     </main>
   );
 }
