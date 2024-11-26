@@ -108,9 +108,7 @@ export default function Home() {
           </CardContainer>
           <CardContainer className="inter-var">
             <CardBody className="bg-gray-50 dark:bg-black relative 
-            group/card dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] 
-             dark:border-[#E2CBFF] border-black/[0.1] 
-            w-full md:!w-[350px] h-auto rounded-xl p-6 border">
+            group/card dark:hover:shadow-2xl ">
               <CardItem
                 translateZ={"50"}
                 className="text-xl font-bold text-neutral-600 dark:text-white"
